@@ -1,33 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Demo1Component } from '../src/demos/1_Base_Component/Demo1Component';
+import { Exo1Component} from '../src/exos/1_Creation_Component/Exo1Component';
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+      <p>{new Date().toLocaleDateString('fr')}</p>
+      
+      <h1> Salut !!!</h1>
+      {/** Si on veut mettre autre chose en valeur, autre chose qu'une STRING
+       * On doit mettre des accolades
+       */}
+      <Demo1Component name='HTML' type='Front-End' difficulty={1}/>
+      <Demo1Component name='Express' type='Back-End' difficulty={5}/>
+      {/** On peut mettre des valeurs par défaut si on a rien mis dans notre composant */}
+      <Demo1Component/>
+
+      <Exo1Component name="Audrey" age={25}/>
+      {/** Si pas définit, si on veut une valeur pour l'âge par défaut, on met dans les props: age=18 */}
+      <Exo1Component name="Dylan"/>
     </>
   )
 }
