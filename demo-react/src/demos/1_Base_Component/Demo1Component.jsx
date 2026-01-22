@@ -22,6 +22,7 @@ export const Demo1Component = (props) => {
         /** On est pas obligé de mettre <div></div> */
         /** On met un fragment à la place */
         <>
+            /***************** DEMO1Component ********************************** */
             <p className={style['grey-text']}>Bienvenue au cours de {name} qui est du {type}</p>
             <p className='grey-text'>Difficulté : {difficulty}/5</p>
         </>

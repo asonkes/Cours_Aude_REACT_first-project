@@ -1,0 +1,11 @@
+.nopet {
+    background-color: lightgray;
+    margin: 0.5rem;
+    padding: 1rem;
+}
+
+.pet {
+    background-color: lightsteelblue;
+    margin: 0.5rem;
+    padding: 1rem;
+}
