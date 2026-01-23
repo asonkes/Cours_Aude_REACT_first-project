@@ -172,3 +172,75 @@ _Dans le module.css :_
     Dans l'inspecteur, nous pourrons voir que ce paragraphe possède un nom de classe qui ressemble à _nomClasse_182a58.
 
 ## Rendu conditionnel
+
+Il y a plusieurs façons de faire du rendu conditionnel. Chaque façon est propre à une utilisation.
+
+* Le **if** n'est utilisable qu'en dehors du rendu (return ()). Il sert donc à générer un rendu différent en fonction de notre condition.\
+_exemple :_
+    ```jsx
+        export const NomComposant = (props) => {
+            const { isError } = props;
+
+            if(isError){
+                return (
+                    <> 
+                        Une erreur est survenue 🤖
+                    </>
+                )
+            }
+
+            return (
+                <> 
+                    Pas d'erreur, tout roule 🛞
+                </>
+            )
+        }
+    ```
+* La **ternaire**, qu'on peut faire directement dans le rendu (pour appliquer une classe ou l'autre) (ou pour afficher un contenu ou l'autre)
+    ```jsx
+    import style from './NomComposant.module.css';
+
+    export const NomComposant = (props) => {
+        const { color } = props;
+
+        return (
+            <div className={ (color === 'rose') ? style.pink : style.black }>
+
+                <p>Chanson du jour : { 
+                    (color === 'rose') ?
+                    <span>Je vois la vie en roooooooooseuuuuuh</span> : 
+                    <span>Noir c'est noiiiir, il n'y a plus d'espoir oohoooooh </span>
+                     } </p>
+
+            </div>
+        )
+    }
+    ```
+* L'opérateur **OU ||**. Pour afficher le contenu d'une variable si non null et non undefined ou une autre valeur.
+    ```jsx
+    export const NomComposant = (props) => {
+        const {city, population} = props;
+
+        return (
+            <div> 
+                <p>Ville : { city } </p>
+                <p>Nombre d'habitants : { population ||'Donnée inconnue' } </p>
+            </div>
+        )
+    }
+    ```
+* L'opérateur **ET &&**. Pour afficher quelque chose (ou appliquer une classe) si la condition est respectée.
+    ```jsx
+    export const NomComposant = (props) => {
+        const {quote, author, imageAuthor} = props;
+
+        return (
+            <div> 
+                <q>{quote}</q>
+                <p>{author}</p>
+                { imageAuthor && <img src={imageAuthor} /> }
+                {/* n'affichera l'image que si on a reçu une image */}
+            </div>
+        )
+    }
+    ```

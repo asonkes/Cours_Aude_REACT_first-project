@@ -1,0 +1,55 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border: 4px solid orange;
+}
+
+.product {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 40px;
+    margin: 20px;
+    border: 2px solid red;
+}
+
+.name {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+}
+
+.unsold {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    border: 4px solid red;
+}
+
+.icon {
+    font-size: 36px;
+}
+
+.promoPrice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    padding: 20px;
+    border-radius: 50px;
+}

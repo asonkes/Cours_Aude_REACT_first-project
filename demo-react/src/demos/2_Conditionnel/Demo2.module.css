@@ -1,11 +1,36 @@
 .nopet {
-    background-color: lightgray;
-    margin: 0.5rem;
+    background-color: rgb(232, 230, 230);
+    border-radius: 1rem;
+    margin: 1rem 0.5rem;
     padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    a {
+        color: tomato;
+    }
 }
 
 .pet {
-    background-color: lightsteelblue;
-    margin: 0.5rem;
+    background-color: rgb(214, 224, 236);
+    border-radius: 1rem;
+    margin: 1rem 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    padding: 3rem;
+
+}
+
+.dog {
+    background: url('../../../public/images/66080242-dog-paw-print-colorful-pattern-vector-illustration.avif');
+}
+
+.cat {
+    background: url('../../../public//images//istockphoto-1005886450-612x612.jpg');
+}
+
+.inside {
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 0.75rem;
     padding: 1rem;
 }
