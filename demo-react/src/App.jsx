@@ -4,6 +4,7 @@ import { Exo1Component} from '../src/exos/1_Creation_Component/Exo1Component';
 import { Demo2 } from './demos/2_Conditionnel/Demo2';
 import { Exo2Component } from './exos/2_Exo_Conditionnel/Exo2Component';
 import style from '../src/exos/2_Exo_Conditionnel/Exo2.module.css';
+import { Demo3 } from './demos/3_Collections/Demo3';
 
 function App() {
 
@@ -86,6 +87,9 @@ function App() {
           promoPrice={10}
         />
       </div>
+
+      {/***************** Demo3 ********************************** */}
+      <Demo3 />
     </>
   )
 }

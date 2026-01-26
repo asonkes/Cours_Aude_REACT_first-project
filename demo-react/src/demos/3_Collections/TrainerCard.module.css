@@ -1,0 +1,61 @@
+.card {
+    width: 17%;
+    aspect-ratio: 3/4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 1rem;
+    border-radius: 1rem;
+
+    ul {
+        padding-left: 1rem;
+    }
+}
+
+.hobbies {
+    height: 40%;
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.male {
+    h3 {
+        color: rgb(177, 72, 177);
+
+        &::after {
+            content: '♂';
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.female {
+    h3 {
+        color: darkolivegreen;
+
+        &::after {
+            content: '♀';
+            margin-left: 0.5rem;
+
+        }
+    }
+}
+
+.other {
+    h3 {
+        color: orange;
+
+        &::after {
+            content: '∅';
+            margin-left: 0.5rem;
+
+        }
+    }
+}
