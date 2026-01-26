@@ -7,7 +7,7 @@ export const TrainerCard = (props) => {
 
     // On extrait ensuite tout ce dont on a besoin du formateur
     // Id n'est pas utilisé ici !!! Pas de soucis...
-    const { id, firstname, lastname, gender, vacations, hobbies } = trainer;
+    const { firstname, lastname, gender, vacations, hobbies } = trainer;
 
     return (
         <div className={ `${style.card} 

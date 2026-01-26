@@ -5,6 +5,9 @@ import { Demo2 } from './demos/2_Conditionnel/Demo2';
 import { Exo2Component } from './exos/2_Exo_Conditionnel/Exo2Component';
 import style from '../src/exos/2_Exo_Conditionnel/Exo2.module.css';
 import { Demo3 } from './demos/3_Collections/Demo3';
+import { Exo3Component } from './exos/3_Exo_Map/Exo3Component';
+import { Demo4 } from './demos/4_Events/Demo4';
+import { Demo5 } from './demos/5_State/Demo5';
 
 function App() {
 
@@ -90,6 +93,15 @@ function App() {
 
       {/***************** Demo3 ********************************** */}
       <Demo3 />
+
+      {/***************** EXO1Component ********************************** */}
+      <Exo3Component/>
+
+      {/***************** Demo4 ********************************** */}
+      <Demo4/>
+
+      {/***************** Demo4 ********************************** */}
+      <Demo5/>
     </>
   )
 }

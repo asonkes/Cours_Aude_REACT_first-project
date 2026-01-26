@@ -4,21 +4,24 @@ import { TrainerCard } from "./TrainerCard"
 export const Demo3 = () => {
     
     const trainers = [
-        {id: 1, 
+        {
+            id: 1, 
             firstname: 'Aude', 
             lastname: 'Beurivé', 
             gender: 'f', 
             vacations: false, 
             hobbies: ['Dessin', 'Tricot', 'Soup']
         },
-        {id: 2, 
+        {
+            id: 2, 
             firstname: 'Aurélien', 
             lastname: 'Strimelle', 
             gender: 'm', 
             vacations: false, 
             hobbies: ['Randonnée', 'Jeux de Société']
         },
-        {id: 3, 
+        {
+            id: 3, 
             firstname: 'Quentin', 
             lastname: 'Geerts', 
             gender: 'm', 
