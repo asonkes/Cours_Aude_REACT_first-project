@@ -32,7 +32,7 @@ export const FilmCard = (props) => {
 
                 <span>
                     {(!rating || rating === 0) ?
-                        (<span>0</span>) :
+                        (<span></span>) :
                         (Array.from({length: 5}, (value, index) => 
                             index < rating ?
                             (<span>⭐</span>) :

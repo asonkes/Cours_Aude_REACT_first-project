@@ -8,6 +8,7 @@ import { Demo3 } from './demos/3_Collections/Demo3';
 import { Exo3Component } from './exos/3_Exo_Map/Exo3Component';
 import { Demo4 } from './demos/4_Events/Demo4';
 import { Demo5 } from './demos/5_State/Demo5';
+import { Exo4Component } from './exos/4_Exo_UseState1/Exo4Component';
 
 function App() {
 
@@ -102,6 +103,9 @@ function App() {
 
       {/***************** Demo4 ********************************** */}
       <Demo5/>
+
+      {/***************** EXO4Component ********************************** */}
+      <Exo4Component/>
     </>
   )
 }

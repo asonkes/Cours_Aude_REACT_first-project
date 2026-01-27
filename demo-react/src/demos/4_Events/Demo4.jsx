@@ -8,15 +8,12 @@ export const Demo4 = () => {
     const increment = () => {
         count++;
         console.log(count);
-
     }
 
     const decrement = () => {
         count--;
         console.log(count);
-
     }
-
 
     return (
         <div>
