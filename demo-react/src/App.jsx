@@ -11,6 +11,8 @@ import { Demo5 } from './demos/5_State/Demo5';
 import { Exo4Component } from './exos/4_Exo_UseState1/Exo4Component';
 import { Demo6 } from './demos/6_Formulaires/Demo6';
 import { Demo6Biss } from './demos/6_Formulaire2/Demo6Biss';
+import { Demo6Ter } from './demos/6_Formulaires3/Demo6Ter';
+import {Exo5Component} from './exos/5_Exo_Formulaire/Exo5Component';
 
 function App() {
 
@@ -109,11 +111,17 @@ function App() {
       {/***************** EXO4Component ********************************** */}
       <Exo4Component/>
 
-      {/***************** Demo6 ********************************** */}
+      {/***************** Demo6 - Formulaire ********************************** */}
       <Demo6/>
 
-      {/***************** Demo6 - 2eme facon de faire ********************************** */}
+      {/***************** Demo6Biss - Formulaire - 2eme facon de faire (avec 1 seule fonciton qui gère le tout) ********************************** */}
       <Demo6Biss/>
+
+      {/***************** Demo6Ter - Formulaire Avec Librairie ********************************** */}
+      <Demo6Ter/>
+
+      {/***************** Exo5Component ********************************** */}
+      <Exo5Component/>
     </>
   )
 }

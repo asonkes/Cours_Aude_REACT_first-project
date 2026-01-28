@@ -1,0 +1,10 @@
+.exo5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid blue;
+}
+
+.exo5Container {
+    display: flex;
+}

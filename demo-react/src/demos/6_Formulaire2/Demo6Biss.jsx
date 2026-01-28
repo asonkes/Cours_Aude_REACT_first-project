@@ -17,18 +17,57 @@ export const Demo6Biss = () => {
         // console.log(event);
         // Dans event, nous avons des sinformations sur les champs qui viennent déclencher l'évènement
         // Le nom du champ
-        console.log(event.target.name);
-        // le type du champ^(number, text, password) 
-        console.log(event.target.type);
-        
-        
+        const name = event.target.name;
+        console.log(name);
+        // le type du champ(number, text, password) 
+        const type = event.target.type;
+        console.log(type);
+        // TODO Modifier la bonne valeur de splitForm en fonction du name et du type après manger
+
+        setSplitForm(prev => {
+            const newSplitForm = {
+                ...prev, 
+                // On récupère tout ce qui se toruve déjà dans prev, c'est a dire dans splitForm
+                // ensuite, on modifie juste la propriété qui nous intéresse
+                
+                // splitForm?name => existe pas dans splitForm
+                // splitForm[name] => va chercher la propriété qui s'appelle comme la chaine contenue dans la variable name 
+                // splitForm['bill'] => ex : si name contient 'bill', ira chercher la propriété qui s'appelle bill
+
+                /** Si le type du champ est une checkbox , la valeur se trouve dans la propriété checked et ets un booléen
+                 * Si le type de champ est un number, on va parse la valeur en nombre
+                 * Si ni l'un, ni l'autre, on prend la valeur telle quelle */
+                [name] : (type === 'checkbox') ? 
+                event.target.checked :
+                (type === 'number') ?
+                event.target.valueAsNumber :
+                event.target.value
+            }
+            return newSplitForm;
+            // ou return {...}
+        })
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault(); // On empêche le rechargement de la page
+
+        // Pour remettre le total à 0 quand on clique sur le su
+        setTotalPerPerson(undefined);
+
+        // On vérifie ici, que la note et le nbre de personne soit au-dessus de 0
+        if(splitForm.bill > 0 && splitForm.nbPerson > 0) {
+            setTotalPerPerson( (splitForm.bill + (splitForm.tips/100)) / splitForm.nbPerson);
+            setIsValid(true);
+        } else {
+            setIsValid(false);
+        }
     }
 
     return (
     <div className={style.demo6Biss}>
         <h2>Split' O Resto</h2>
     
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="bill">Total de la note :</label>
                     {/** On récupère la valeur dans l'input 
@@ -46,7 +85,7 @@ export const Demo6Biss = () => {
 
                 <div>
                     <label htmlFor="tips">Pourboire :</label>
-                    {/** value={5} sur le select ==> ca veut dire que c'ets la valeur par défaut */}
+                    {/** value={5} sur le select ==> ca veut dire que c'est la valeur par défaut */}
                     <select id="tips" name="tips" value={splitForm.tips} onChange={handleField}>%
                             {/** UN client peut ne rien prendre */}
                         <option value={0}>Aucun</option>
