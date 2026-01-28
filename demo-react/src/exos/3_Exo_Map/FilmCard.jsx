@@ -6,7 +6,7 @@ export const FilmCard = (props) => {
     const {film} = props;
 
     // Ce dont est composé 'films'
-    const {id, title, directors, year, image, rating} = film;
+    const {title, directors, year, image, rating} = film;
 
     return(
         <div className={style.filmcard}>

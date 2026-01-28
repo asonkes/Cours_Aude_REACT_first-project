@@ -9,6 +9,8 @@ import { Exo3Component } from './exos/3_Exo_Map/Exo3Component';
 import { Demo4 } from './demos/4_Events/Demo4';
 import { Demo5 } from './demos/5_State/Demo5';
 import { Exo4Component } from './exos/4_Exo_UseState1/Exo4Component';
+import { Demo6 } from './demos/6_Formulaires/Demo6';
+import { Demo6Biss } from './demos/6_Formulaire2/Demo6Biss';
 
 function App() {
 
@@ -106,6 +108,12 @@ function App() {
 
       {/***************** EXO4Component ********************************** */}
       <Exo4Component/>
+
+      {/***************** Demo6 ********************************** */}
+      <Demo6/>
+
+      {/***************** Demo6 - 2eme facon de faire ********************************** */}
+      <Demo6Biss/>
     </>
   )
 }

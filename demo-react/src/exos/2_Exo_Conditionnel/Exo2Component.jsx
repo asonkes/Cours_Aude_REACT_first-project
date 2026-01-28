@@ -10,7 +10,7 @@ export const Exo2Component = (props) => {
             <div className={style.product}>
                 <p className={style.name}>{name} n'est plus à vendre !!!</p>
                 <div className={style.unsold}>
-                    <icon className={style.icon}>❌</icon>
+                    <i className={style.icon}>❌</i>
                 </div>
             </div>
         )
