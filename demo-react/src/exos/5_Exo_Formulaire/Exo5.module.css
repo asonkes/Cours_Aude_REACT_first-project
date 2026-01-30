@@ -15,7 +15,7 @@
 }
 
 .exo5Numbers {
-    width: 50%;
+    min-width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@
 }
 
 .exo5Calculator {
-    width: 50%;
+    min-width: 20%;
     display: inline-flex;
     justify-content: end;
     align-items: center;
