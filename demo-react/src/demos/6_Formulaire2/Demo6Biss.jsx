@@ -15,7 +15,7 @@ export const Demo6Biss = () => {
 
     const handleField = (event) => {
         // console.log(event);
-        // Dans event, nous avons des sinformations sur les champs qui viennent déclencher l'évènement
+        // Dans event, nous avons des informations sur les champs qui viennent déclencher l'évènement
         // Le nom du champ
         const name = event.target.name;
         console.log(name);
@@ -27,7 +27,7 @@ export const Demo6Biss = () => {
         setSplitForm(prev => {
             const newSplitForm = {
                 ...prev, 
-                // On récupère tout ce qui se toruve déjà dans prev, c'est a dire dans splitForm
+                // On récupère tout ce qui se trouve déjà dans prev, c'est a dire dans splitForm
                 // ensuite, on modifie juste la propriété qui nous intéresse
                 
                 // splitForm?name => existe pas dans splitForm

@@ -1,0 +1,38 @@
+.list {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid blue;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 18px;
+        }
+    }
+}
+
+.finish,
+.delete {
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+}
+
+.finish {
+    background-color: rgb(10, 199, 10);
+}
+
+.delete {
+    background-color: red;
+}

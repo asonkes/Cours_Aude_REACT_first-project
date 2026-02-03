@@ -14,6 +14,7 @@ import { Demo6Biss } from "./demos/6_Formulaire2/Demo6Biss";
 import { Demo6Ter } from "./demos/6_Formulaires3/Demo6Ter";
 import { Exo5Component } from "./exos/5_Exo_Formulaire/Exo5Component";
 import { Demo7 } from "./demos/7_Interaction/Demo7";
+import { Container } from "./exos/6.Exo_TodoList/Container";
 
 function App() {
   return (
@@ -114,8 +115,12 @@ function App() {
 
       {/***************** Exo5Component ********************************** */}
       <Exo5Component />
+
       {/***************** DEMO2 ********************************** */}
       <Demo7 />
+
+      {/***************** Exo TodoList ********************************** */}
+      <Container />
     </>
   );
 }
