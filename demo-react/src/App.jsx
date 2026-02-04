@@ -17,6 +17,7 @@ import { Demo7 } from "./demos/7_Interaction/Demo7";
 import { Container } from "./exos/6.Exo_TodoList/Container";
 import { ToDoList } from "./exos/7_Exo_CorrectionAude-todolist/TodoList";
 import { LaVie } from "./demos/8_Cycle_De_vie/LaVie";
+import { Project } from "./exos/8.Cycle_De_vie/Project";
 
 function App() {
   return (
@@ -129,6 +130,9 @@ function App() {
 
       {/***************** DEmo8 - Interactions ********************************** */}
       <LaVie />
+
+      {/***************** Exo - Compteur - Cycle de vie ********************************** */}
+      <Project />
     </>
   );
 }
