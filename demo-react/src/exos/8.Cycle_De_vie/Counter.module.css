@@ -1,0 +1,64 @@
+.compteur {
+  position: relative;
+  width: 70%;
+  border: 2px solid blue;
+  border-radius: 50px;
+  margin: 50px;
+}
+
+.none {
+  position: relative;
+  width: 70%;
+  border-radius: 50px;
+  margin: 50px;
+  border: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+.title {
+  width: fit-content;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid orchid;
+  }
+
+  button {
+    padding: 10px;
+    background-color: white;
+    border: 2px solid orchid;
+    border-radius: 8px;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+}
+
+.hide {
+  position: absolute;
+  top: 47px;
+  right: 30px;
+  padding: 10px;
+  border: 2px solid orchid;
+  background-color: white;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: orchid;
+    color: white;
+    cursor: pointer;
+  }
+}
