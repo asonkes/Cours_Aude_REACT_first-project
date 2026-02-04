@@ -6,15 +6,18 @@ export const ListItem = (props) => {
     const {task, deleteTask} = props;
 
     // Et la fonction n'appartient pas aux paramètres de 'task'
-    const {id, name, description} = task;
+    const {id, name, description, mode} = task;
 
   return (
     <>
         <li className={style.list}>
-            <p className={style.text}>
-                <span>{name}</span>
-                <span>{description}</span>
-            </p>
+            <div>
+                <p className={style.text}>
+                    <span>{name}</span>
+                    <span className={style.span}>{mode}</span>
+                </p>
+                <p className={style.text}>{description}</p>
+            </div>
             <div>
                 {/** Fonction fléchée car on récupère l'id comme paramètre */}
                 {/** Si pas 'd'id' ==> pas de fonction fléchée */}

@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .list {
     max-width: 100%;
     display: flex;
@@ -10,14 +15,13 @@
     border: 2px solid blue;
 
     .text {
-        display: flex;
-        flex-direction: column;
+        padding: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 18px;
+    }
 
-        span {
-            padding: 10px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 18px;
-        }
+    .span {
+        padding: 0 20px;
     }
 }
 

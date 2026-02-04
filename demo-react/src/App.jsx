@@ -15,6 +15,7 @@ import { Demo6Ter } from "./demos/6_Formulaires3/Demo6Ter";
 import { Exo5Component } from "./exos/5_Exo_Formulaire/Exo5Component";
 import { Demo7 } from "./demos/7_Interaction/Demo7";
 import { Container } from "./exos/6.Exo_TodoList/Container";
+import { ToDoList } from "./exos/7_Exo_CorrectionAude-todolist/TodoList";
 
 function App() {
   return (
@@ -121,6 +122,9 @@ function App() {
 
       {/***************** Exo TodoList ********************************** */}
       <Container />
+
+      {/***************** Exo TodoList - Correction Aude ********************************** */}
+      <ToDoList />
     </>
   );
 }

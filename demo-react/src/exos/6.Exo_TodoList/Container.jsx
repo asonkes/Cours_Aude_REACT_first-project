@@ -12,18 +12,21 @@ export const Container = () => {
             id: 1,
             name: "Acheter du café",
             decription: "Prendre ce café pour me réveiller",
+            mode : "urgent",
             finish : false
         },
         {
             id: 2,
             name: "Réaliser l'exercice",
             description: "Créer l'application 'Todo List' ",
+            mode : "normal",
             finish : false
         },
         {
             id: 3,
             name: "Terminer mes cours de UDemy",
             description: "Pour me donner confiance en moi",
+            mode : "normal",
             finish : true
         }
     ]);
@@ -37,14 +40,10 @@ export const Container = () => {
         setTasks(tasks.filter((task) => task.id !== id));
     };
 
-    // ici on fait un state vide pour la valeur que l'on va mettre dans les input
-    const [valueTask, setValueTask] = useState("");
-
     // ici, on a mettre le useForm
     const {
         register, 
-        handleSubmit, 
-        formState: {errors},
+        handleSubmit
     } = useForm({defaultValues: {
         name: '',
         description: '',
@@ -53,24 +52,21 @@ export const Container = () => {
     mode: "onChange"
 });
 
-    // /** Ici manière de UDemy */
-    // const handleSubmit = (event) => {
-    //     event.preventdefault();
 
-    //     setTasks([...tasks, { id: valueTask, name: valueTask, description: valueTask, finish: valueTask }]);
 
-    //     setValueTask("");
-    // }
-
-    // Et ca sur les input :
-    //  onChange={(event) => setValueTask(event.target.value)}
+const addTask = (data) => {
+    let newId = Date.now();
+    setTasks([...tasks, { ...data, finish : false, id : newId }]);
+    
+}
 
     return (
+
         <div className={style.container}>
             <h1>TodoList</h1>
 
             <h2>‼️‼️‼️Ajouter une nouvelle tâche‼️‼️‼️</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(addTask)}>
                 <div className={style.containerForm}>
                     <label htmlFor="name">Nom : </label>
                     <input 
@@ -101,9 +97,9 @@ export const Container = () => {
                         required: true
                     })}
                     >
-                    <option>En cours</option>
-                    <option>Urgent</option>
-                    <option>Terminé</option>
+                    <option value='normal'>Normal</option>
+                    <option value='moyen'>Moyen</option>
+                    <option value='urgent'>Urgent</option>
                 </select>
                 </div>
                 <button>Ajouter</button>
