@@ -29,6 +29,26 @@
     gap: 1rem;
 }
 
+.todos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    select {
+        height: 2rem;
+        width: 50%;
+        margin-bottom: 1rem;
+        padding: 0 0.5rem;
+        border: none;
+        border-radius: 0.5rem;
+
+        &:focus {
+            outline: none;
+            outline: 2px solid darkseagreen;
+        }
+    }
+}
+
 .todo {
     width: 90%;
     padding: 1rem;
@@ -83,7 +103,7 @@
     .title {
         width: 70%;
         position: relative;
-        font-size: 1.25rem;
+        font-size: 1rem;
 
 
         &::first-letter {
