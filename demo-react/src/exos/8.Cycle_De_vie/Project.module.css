@@ -15,3 +15,26 @@ h1 {
     font-size: 25px;
     text-decoration: underline;
 }
+
+.containerProject {
+    display: flex;
+    align-items: center;
+}
+
+.show,
+.hide {
+    padding: 10px;
+    border: 2px solid orchid;
+    background-color: white;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: orchid;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.hide {
+    margin: 80px 0;
+}

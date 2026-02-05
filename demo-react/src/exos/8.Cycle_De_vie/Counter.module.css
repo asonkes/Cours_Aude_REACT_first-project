@@ -1,20 +1,11 @@
 .compteur {
-  position: relative;
-  width: 70%;
   border: 2px solid blue;
   border-radius: 50px;
   margin: 50px;
 }
 
-.none {
-  position: relative;
-  width: 70%;
-  border-radius: 50px;
-  margin: 50px;
-  border: none;
-}
-
 .container {
+  display: flex;
   padding: 20px;
 }
 
@@ -22,6 +13,7 @@
   width: fit-content;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
+  padding: 20px 0;
 }
 
 .count {
@@ -43,22 +35,6 @@
     border: 2px solid orchid;
     border-radius: 8px;
     margin: 0 20px;
-    cursor: pointer;
-  }
-}
-
-.hide {
-  position: absolute;
-  top: 47px;
-  right: 30px;
-  padding: 10px;
-  border: 2px solid orchid;
-  background-color: white;
-  border-radius: 5px;
-
-  &:hover {
-    background-color: orchid;
-    color: white;
     cursor: pointer;
   }
 }
