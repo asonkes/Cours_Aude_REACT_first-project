@@ -18,6 +18,8 @@ import { Container } from "./exos/6.Exo_TodoList/Container";
 import { ToDoList } from "./exos/7_Exo_CorrectionAude-todolist/TodoList";
 import { LaVie } from "./demos/8_Cycle_De_vie/LaVie";
 import { Project } from "./exos/8.Cycle_De_vie/Project";
+import { Project2 } from "./exos/Cycle_De_Vie_Aude/Project";
+import { Prokedex } from "./demos/9_API/Pokedex";
 
 function App() {
   return (
@@ -133,6 +135,12 @@ function App() {
 
       {/***************** Exo - Compteur - Cycle de vie ********************************** */}
       <Project />
+
+      {/***************** Exo - Compteur - Cycle de vie - Correction Aude ********************************** */}
+      <Project2 />
+
+      {/***************** DEMO 9 - API ********************************** */}
+      <Prokedex />
     </>
   );
 }

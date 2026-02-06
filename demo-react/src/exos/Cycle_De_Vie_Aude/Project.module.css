@@ -1,0 +1,126 @@
+.container {
+    background-color: darkseagreen;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projet {
+    width: 30%;
+    aspect-ratio: 3/4;
+
+    @media(max-width : 840px) {
+        width: 70%;
+        aspect-ratio: 4/3;
+    }
+
+    background-color: whitesmoke;
+
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    h2 {
+        color: #7A61C6;
+    }
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    width: 75%;
+
+    position: relative;
+
+    &:not(:has(.compteur)) {
+        .title {
+            position: static;
+            box-shadow: none;
+            width: 80%;
+            height: 5.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 1.8rem;
+        }
+
+    }
+}
+
+.title {
+    position: absolute;
+    top: -1rem;
+    left: 1.5rem;
+    background-color: whitesmoke;
+    padding: 0.2rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.25rem;
+    color: darkseagreen;
+    box-shadow: rgba(0, 0, 0, 0.778) 0px 25px 20px -20px;
+
+}
+
+.compteur {
+    display: flex;
+    background-color: darkseagreen;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width: 80%;
+    height: 5.5rem;
+    padding-top: 0.5rem;
+    border-radius: 0.75rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+
+    color: whitesmoke;
+    font-weight: bold;
+
+    font-size: 1.8rem;
+
+    &>* {
+        width: 22%;
+        text-align: center;
+    }
+
+}
+
+button {
+    height: fit-content;
+    width: fit-content;
+    font-size: 1.5rem;
+
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 50ms linear;
+
+    &:disabled {
+        background-color: lightgray;
+        filter: grayscale(0.8);
+        cursor: inherit;
+    }
+
+    &:hover:not(:disabled) {
+        transform: scale(0.95);
+    }
+
+    &:active:not(:disabled) {
+        transform: scale(0.9);
+    }
+}
