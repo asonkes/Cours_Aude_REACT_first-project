@@ -28,7 +28,7 @@ export const PokemonList = (props) => {
     // Quand on arrive sur la page 'crochet vide'
     useEffect( () => {
         
-    axios.get('https://pokeapi.co/api/v2/pokemon')
+    axios.get(`https://pokeapi.co/api/v2/pokemon`)
         .then((response) => {
             console.log(response.data);
 
@@ -41,8 +41,8 @@ export const PokemonList = (props) => {
             
         })
         .catch((error) => {
+            console.log(error);
             setError('Oupsy une erreur est survenue avec l\'API');
-            
         });       
     }, []);
 
@@ -63,6 +63,7 @@ export const PokemonList = (props) => {
                 setPokemons(response.data.results);
         })
             .catch ((error) => {
+                console.log(error);
                 setError('Oupsy une erreur est survenue avec l\'API');
         });
     }
@@ -76,14 +77,14 @@ export const PokemonList = (props) => {
                 {pokemons.map(pokemon => (
                     <li
                     onClick={() => onPokemonSelection(pokemon.name)} 
-                    key={pokemon.name}>{pokemon.name
-                    }</li>
+                    key={pokemon.name}>{pokemon.name}
+                    </li>
                 ))}
             </ul>
 
             <div className={style.buttons}>
-                <button onClick={() => { getPokemons(false)}} disabled={!prevRequest}>⏮️ Pécédent​</button>
-                <button onClick={() => { getPokemons(true)}} disabled={!nextRequest}>Suivant ⏭️​</button>
+                <button onClick={() => { getPokemons(false)}} disabled={!prevRequest}>⏮️ Pécédent</button>
+                <button onClick={() => { getPokemons(true)}} disabled={!nextRequest}>Suivant⏭️</button>
             </div>
         </div>
     )

@@ -17,16 +17,17 @@ export const Pokemon = (props) => {
     // Mais ça, cela ne fonctionne que s'il y a un name
     // Donc mettre un 'if'
     if(name) {
-      axios.get('https://pokeapi.co/api/v2/pokemon/${name')
+      axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
         .then( (response) => {
-          console.log(response.data);
+
           setPokemon({
-            height: '',
-            weight: '',
-            image: '',
-            types: [], 
-            cries: ''
+            height: response.data.height * 10, // pour avoir la taille en cm
+            weight: response.data.weight / 10, // pour l'avoir en kilo
+            image: response.data.sprites.other.showdown.front_default, // pour récupérer l'image
+            types: response.data.types.map(type => type.type.name), // on récupère le tableau qu'on map pour obtenir un tableau avec juste les noms des types 
+            cries: response.data.cries.legacy
           });
+          
         })
         .catch( (error) => {
           console.log(error);
@@ -47,7 +48,17 @@ export const Pokemon = (props) => {
 
   return (
     <div className={style.pkm}>
-      <h2>{name}</h2>      
+      <h2>{name}</h2> 
+      <img src={pokemon?.image} alt={`Image qui bouge représentant le pokemon ${name}`} />
+      <p>Poids : ${pokemon?.weight} kg</p>     
+      <p>Taille : ${pokemon?.height} cm</p>   
+      <h3>Type(s)</h3>
+      <p>
+        {
+          pokemon?.types?.map(type => (<span>{type}</span>))
+        }  
+      </p>  
+      <audio src={pokemon?.cries} controls></audio>
     </div>
 
 
